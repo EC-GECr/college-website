@@ -1,0 +1,152 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ET&T</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+
+<body>
+<div class="contact-body">
+    <div class="header-sm d-block">
+        <header class="navbar nav-bg fixed-top">
+            <div class="container home-head-container">
+                <a href="index.html" class="navbar-brand">
+                    <img src="{% static 'img/logo.png' %}" id="logo" alt="GEC Raipur" />
+                </a>
+
+                <!-- Menu Button -->
+                <div class="menu-btn">
+                    <div class="btn-line"></div>
+                    <div class="btn-line"></div>
+                    <div class="btn-line"></div>
+                </div>
+
+                <!-- Menu -->
+                <nav class="menu">
+                    <div class="close-btn">&times;</div>
+
+                    <ul class="menu-nav">
+                        <li class="nav-item0">
+                            <a href="index.html" class="nav-link0">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item0">
+                            <a href="institute.html" class="nav-link0">
+                                Institute
+                            </a>
+                        </li>
+                        <li class="nav-item0">
+                            <a href="department.html" class="nav-link0">
+                                Department
+                            </a>
+                        </li>
+                        <li class="nav-item0 active">
+                            <a href="contactus.html" class="nav-link0">
+                                Contact
+                            </a>
+                        </li>
+
+                        <li class="nav-item0">
+                            <a href="login.html" class="nav-link0 dark-btn">
+                                Log in
+                            </a>
+                        </li>
+
+                        <li class="nav-item0">
+                            <a href="register.html" class="nav-link0 light-btn">
+                                Register
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+    </div>
+
+    <div class="container contact-body-container arrow-top">
+        <div class="row">
+            <div class="col-md-3 d-md-block d-sm-none"></div>
+            <div class="col-md-6 contact-card">
+                <div class="head">
+                    <i class="fas fa-envelope"></i>
+                    Contact Us
+                    <p>
+                        You are about to contact the Department of Electronics & Telecommunication at Government Engineering College, Raipur.
+                    </p>
+                </div>
+
+                <form action="" method="POST" class=contact-form>
+                    <div class="form-elems">
+                        <label for="name">Name</label>
+                        <input name="name" type="text" placeholder="Daenerys Targaryen" autocomplete="off" required>
+                    </div>
+
+                    <div class="form-elems">
+                        <label for="email">E-mail</label>
+                        <input name="email" type="email" placeholder="motherofdragons@got.com" autocomplete="off" required>
+                    </div>
+
+                    <!-- <div class="form-elems">
+                        <label for="category">Category</label>
+                                <select name="category" form="elems">
+                                    <option>What are you contacting us for?</option>
+                                    <option value="admission">Admission</option>
+                                    <option value="exam">Exam</option>
+                                    <option value="other">Other</option>
+                                </select>
+                    </div> -->
+
+                    <div class="form-elems">
+                        <label for="message">Message</label>
+                        <textarea name="message" placeholder="Dracarys"></textarea>
+                    </div>
+
+                    <div class="form-elems text-center">
+                        <button type="submit" class="dark-btn">
+                            <i class="fas fa-paper-plane mr-1"></i>
+                            Send
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+            <div class="col-md-3 d-md-block d-sm-none"></div>
+        </div>
+    </div>
+
+    <a id="back-to-top"></a>
+
+    <footer class="page-footer font-small fixed-bottom text-center foot-bg">
+        <i class="far fa-copyright"></i>
+        2020 Endgame v0.4.0 | Developers
+    </footer>
+</div>
+
+<!--
+<div class="logo-loader">
+    <div class="logo">
+        <img src="assets/img/logo.png" alt="GEC">
+    </div>
+</div> -->
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>

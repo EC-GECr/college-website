@@ -1,182 +1,22 @@
+{% extends 'base.html' %}
+
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>ET&T</title>
-
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{% static 'css/all.css' %}">
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
-</head>
-
-<body>
-<div class="home-body">
-    <div class="header-big d-md-block d-none">
-        <header class="navbar nav-bg fixed-top">
-            <div class="container home-head-container">
-                <a href="index.html" class="navbar-brand">
-                    <img src="{% static 'img/logo.png' %}" id="logo" alt="GEC Raipur">
-
-                    <div class="brand-name d-inline ml-2">
-                        <ul>
-                            <li>
-                                    <span id="college">
-                                        Government Engineering College
-                                    </span>
-                            </li>
-                            <li>
-                                    <span id="department">
-                                        Electronics & Telecommunication Department
-                                    </span>
-                            </li>
-                        </ul>
-                    </div>
-                </a>
-
-                <ul class="navbar-nav ml-auto">
-
-                    <li class="nav-item">
-                        <a href="login.html" class="nav-link dark-btn">
-                            Log in
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="register.html" class="nav-link light-btn">
-                            Register
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </header>
-
-        <nav class="navbar navbar-expand-sm my-nav nav-bg">
-            <div class="container nav-container">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a href="index.html" class="nav-link">
-                            Home
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="institute.html" class="nav-link">
-                            Institute
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="department.html" class="nav-link">
-                            Department
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="contactus.html" class="nav-link">
-                            Contact
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-
-    <div class="header-sm d-md-none d-block">
-        <header class="navbar nav-bg fixed-top">
-            <div class="container home-head-container">
-                <a href="index.html" class="navbar-brand">
-                    <img src="{% static 'img/logo.png' %}" id="logo" alt="GEC Raipur">
-                </a>
-
-                <!-- Menu Button -->
-                <div class="menu-btn">
-                    <div class="btn-line"></div>
-                    <div class="btn-line"></div>
-                    <div class="btn-line"></div>
-                </div>
-
-                <!-- Menu -->
-                <nav class="menu">
-                    <div class="close-btn">&times;</div>
-
-                    <ul class="menu-nav">
-                        <li class="nav-item0 active">
-                            <a href="index.html" class="nav-link0">
-                                Home
-                            </a>
-                        </li>
-                        <li class="nav-item0">
-                            <a href="institute.html" class="nav-link0">
-                                Institute
-                            </a>
-                        </li>
-                        <li class="nav-item0">
-                            <a href="department.html" class="nav-link0">
-                                Department
-                            </a>
-                        </li>
-                        <li class="nav-item0">
-                            <a href="contactus.html" class="nav-link0">
-                                Contact
-                            </a>
-                        </li>
-
-                        <li class="nav-item0">
-                            <a href="contactus.html" class="nav-link0 dark-btn">
-                                Log in
-                            </a>
-                        </li>
-
-                        <li class="nav-item0">
-                            <a href="contactus.html" class="nav-link0 light-btn">
-                                Register
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-
-        </header>
-
-        <nav class="navbar navbar-expand-sm my-nav nav-bg ">
-            <div class="container nav-container ">
-                <ul class="navbar-nav">
-                    <li class="nav-item active" id="pg_li">
-                        <a href="javascript:void(0)" class="nav-link" id="pg" onclick="pg()"> <!-- pg = current page-->
-                            Home
-                        </a>
-                    </li>
-
-                    <li class="nav-item" id="nb_li">
-                        <a href="javascript:void(0)" class="nav-link" id="nb" onclick="nb()"> <!--nb = notice board-->
-                            Notice
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-
+{% block content %}
     <div class="container home-body-container arrow-top">
         <div class="row">
             <div class="col-md-7 col-sm-11 home-info">
 
-                    <span class="welcome-text">
-                        <span class="strong-text"><span class="first-letter">E</span>lectronics</span> has become an indispensable part of 21st century lifestyle. Across the world, there are rarely any industry or an individual that is not influenced by the technology. Electronics and communication engineering deals with the study and design of various electronic devices and circuits, Analog and digital data transmission and reception through wired or wireless medium among other things. Be it satellite communication which allows even remotest places on the globe to be connected or the fast evolving processors clocking in gigahertz or the embedded systems that make "Internet of Things" a common thing. The Electronics and communication engineers are driving the world towards new abode of possibilities. Idea sharing has never been easier, and the global village that the world has become, is oozing with connectivity. Tele-medicine, Biomedical image and signal processing, Nanotechnology in medicine are few among many trending fields in ECE. So welcome to the world of silicon and  satellite!
-                        <br />
-                        <br />
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nisi debitis quis ex possimus cupiditate sequi tempore reiciendis, laudantium expedita, harum sapiente facere voluptas, animi labore dolor quasi natus sint similique consectetur omnis. Ab labore ut, delectus dolore repellat facilis inventore omnis quos. Incidunt maiores, libero voluptas debitis corporis doloremque odio perspiciatis. Odio ipsam quae commodi saepe porro eveniet debitis earum. Obcaecati sint modi nesciunt magni quidem vitae sunt nostrum rerum, impedit doloremque eius officia, odio laudantium ipsum at aliquid mollitia? Quam distinctio eius deserunt molestias, est hic aut dolorem labore, perspiciatis deleniti dolores! Temporibus dolore assumenda soluta quidem dolores mollitia nulla numquam quod, veritatis quae magnam repellat libero qui obcaecati aspernatur officiis ipsa earum. Delectus non sint quis, deserunt nihil ut numquam soluta dolores tempora porro consequatur asperiores, eum at laudantium expedita? Aspernatur laborum doloribus error esse sint officiis. Eum vero impedit doloremque similique ducimus nulla earum? Molestias quasi asperiores maxime adipisci expedita ipsam ad corporis ducimus dolorum tenetur inventore repudiandae nam recusandae vero doloremque optio, labore libero, porro natus? Tempore quasi, tenetur, obcaecati earum nostrum culpa inventore officiis voluptate molestiae neque quod sequi distinctio odio in laudantium. Iste esse corporis perferendis libero veritatis dolore repudiandae iure molestiae assumenda?
+                <span class="welcome-text">
+                    <span class="strong-text"><span class="first-letter">E</span>lectronics</span> has become an indispensable part of 21st century lifestyle. Across the world, there are rarely any industry or an individual that is not influenced by the technology. Electronics and communication engineering deals with the study and design of various electronic devices and circuits, Analog and digital data transmission and reception through wired or wireless medium among other things. Be it satellite communication which allows even remotest places on the globe to be connected or the fast evolving processors clocking in gigahertz or the embedded systems that make "Internet of Things" a common thing. The Electronics and communication engineers are driving the world towards new abode of possibilities. Idea sharing has never been easier, and the global village that the world has become, is oozing with connectivity. Tele-medicine, Biomedical image and signal processing, Nanotechnology in medicine are few among many trending fields in ECE. So welcome to the world of silicon and  satellite!
+                    <br />
+                    <br />
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nisi debitis quis ex possimus cupiditate sequi tempore reiciendis, laudantium expedita, harum sapiente facere voluptas, animi labore dolor quasi natus sint similique consectetur omnis. Ab labore ut, delectus dolore repellat facilis inventore omnis quos. Incidunt maiores, libero voluptas debitis corporis doloremque odio perspiciatis. Odio ipsam quae commodi saepe porro eveniet debitis earum. Obcaecati sint modi nesciunt magni quidem vitae sunt nostrum rerum, impedit doloremque eius officia, odio laudantium ipsum at aliquid mollitia? Quam distinctio eius deserunt molestias, est hic aut dolorem labore, perspiciatis deleniti dolores! Temporibus dolore assumenda soluta quidem dolores mollitia nulla numquam quod, veritatis quae magnam repellat libero qui obcaecati aspernatur officiis ipsa earum. Delectus non sint quis, deserunt nihil ut numquam soluta dolores tempora porro consequatur asperiores, eum at laudantium expedita? Aspernatur laborum doloribus error esse sint officiis. Eum vero impedit doloremque similique ducimus nulla earum? Molestias quasi asperiores maxime adipisci expedita ipsam ad corporis ducimus dolorum tenetur inventore repudiandae nam recusandae vero doloremque optio, labore libero, porro natus? Tempore quasi, tenetur, obcaecati earum nostrum culpa inventore officiis voluptate molestiae neque quod sequi distinctio odio in laudantium. Iste esse corporis perferendis libero veritatis dolore repudiandae iure molestiae assumenda?
 
-                        <br>
-                        <br>
-                        Have some questions related to your career, Your seniors have created a career map for you!
-                    </span>
+                    <br>
+                    <br>
+                    Have some questions related to your career, Your seniors have created a career map for you!
+                </span>
 
                 <div class="map-btn text-center">
                     <a href="#careerMap"class="scrollTo dark-btn">
@@ -198,20 +38,20 @@
 
                         <div class="card notice">
                             <div class="card-header">
-                                    <span class="notice-type float-left">
-                                        Department
-                                    </span>
+                                <span class="notice-type float-left">
+                                    Department
+                                </span>
                                 <span class="notice-date float-right">
-                                        16 Apr, 2020
-                                    </span>
+                                    16 Apr, 2020
+                                </span>
                                 <span class="is-new float-right mr-1">
-                                        [NEW]
-                                     </span>
+                                    [NEW]
+                                 </span>
                             </div>
                             <div class="card-body">
-                                    <span class="notice-text">
-                                        Time Table: Class-test 1
-                                    </span>
+                                <span class="notice-text">
+                                    Time Table: Class-test 1
+                                </span>
                                 <div class="open-link text-center">
                                     <a href="#" class="open">
                                         <i class="fas fa-external-link-alt"></i>
@@ -223,20 +63,20 @@
 
                         <div class="card notice">
                             <div class="card-header">
-                                    <span class="notice-type float-left">
-                                        College
-                                    </span>
+                                <span class="notice-type float-left">
+                                    College
+                                </span>
                                 <span class="notice-date float-right">
-                                        15 Apr, 2020
-                                    </span>
+                                    15 Apr, 2020
+                                </span>
                                 <span class="is-new float-right mr-1">
-                                        [NEW]
-                                     </span>
+                                    [NEW]
+                                 </span>
                             </div>
                             <div class="card-body">
-                                    <span class="notice-text">
-                                        Lockdown Extension: Schedule for online classes
-                                    </span>
+                                <span class="notice-text">
+                                    Lockdown Extension: Schedule for online classes
+                                </span>
                                 <div class="open-link text-center">
                                     <a href="#" class="open">
                                         <i class="fas fa-external-link-alt"></i>
@@ -248,20 +88,20 @@
 
                         <div class="card notice">
                             <div class="card-header">
-                                    <span class="notice-type float-left">
-                                        Department
-                                    </span>
+                                <span class="notice-type float-left">
+                                    Department
+                                </span>
                                 <span class="notice-date float-right">
-                                        8 Apr, 2020
-                                    </span>
+                                    8 Apr, 2020
+                                </span>
                                 <!-- <span class="is-new float-right mr-1">
                                     [NEW]
                                  </span> -->
                             </div>
                             <div class="card-body">
-                                    <span class="notice-text">
-                                        Join Google Classroom for online assignments and class schedules
-                                    </span>
+                                <span class="notice-text">
+                                    Join Google Classroom for online assignments and class schedules
+                                </span>
                                 <div class="open-link text-center">
                                     <a href="#" class="open">
                                         <i class="fas fa-external-link-alt"></i>
@@ -273,21 +113,21 @@
 
                         <div class="card notice">
                             <div class="card-header">
-                                    <span class="notice-type float-left">
-                                        College
-                                    </span>
+                                <span class="notice-type float-left">
+                                    College
+                                </span>
                                 <span class="notice-date float-right">
-                                        3 Apr, 2020
-                                    </span>
+                                    3 Apr, 2020
+                                </span>
                                 <!-- <span class="is-new float-right mr-1">
                                     [NEW]
                                  </span> -->
                             </div>
                             <div class="card-body">
-                                    <span class="notice-text">
-                                        Web Seminar by Prof. C. Gopal Sairishna
-                                        on Microelectronics in the auditorium.
-                                    </span>
+                                <span class="notice-text">
+                                    Web Seminar by Prof. C. Gopal Sairishna
+                                    on Microelectronics in the auditorium.
+                                </span>
                                 <div class="open-link text-center">
                                     <a href="#" class="open">
                                         <i class="fas fa-external-link-alt"></i>
@@ -299,20 +139,20 @@
 
                         <div class="card notice">
                             <div class="card-header">
-                                    <span class="notice-type float-left">
-                                        Department
-                                    </span>
+                                <span class="notice-type float-left">
+                                    Department
+                                </span>
                                 <span class="notice-date float-right">
-                                        8 Apr, 2020
-                                    </span>
+                                    8 Apr, 2020
+                                </span>
                                 <!-- <span class="is-new float-right mr-1">
                                     [NEW]
                                  </span> -->
                             </div>
                             <div class="card-body">
-                                    <span class="notice-text">
-                                        Join Google Classroom for online assignments and class schedules
-                                    </span>
+                                <span class="notice-text">
+                                    Join Google Classroom for online assignments and class schedules
+                                </span>
                                 <div class="open-link text-center">
                                     <a href="#" class="open">
                                         <i class="fas fa-external-link-alt"></i>
@@ -332,43 +172,22 @@
         </div>
     </div>
 
-    <a id="back-to-top"></a>
+    <script>
+        function pg(){
+            document.querySelector(".home-body-container").classList.remove('mb');
+            document.querySelector(".home-info").style.display = "block";
+            document.getElementById("pg_li").classList.add("active");
+            document.getElementById("nb_li").classList.remove("active");
+            document.querySelector(".home-notice-board").style.display = "none";
+        }
 
-    <footer class="page-footer font-small fixed-bottom text-center foot-bg">
-        <i class="far fa-copyright"></i>
-        2020 Endgame v0.4.0 | Developers
-    </footer>
-</div>
+        function nb(){
+            document.querySelector(".home-body-container").classList.add('mb');
+            document.querySelector(".home-info").style.display = "none";
+            document.getElementById("nb_li").classList.add("active");
+            document.getElementById("pg_li").classList.remove("active");
+            document.querySelector(".home-notice-board").style.display = "block";
+        }
+    </script>
 
-<!--
-<div class="logo-loader">
-    <div class="logo">
-        <img src="{% static '' %}/img/logo.png" alt="GEC">
-    </div>
-</div> -->
-<script>
-    function pg(){
-        document.querySelector(".home-body-container").classList.remove('mb');
-        document.querySelector(".home-info").style.display = "block";
-        document.getElementById("pg_li").classList.add("active");
-        document.getElementById("nb_li").classList.remove("active");
-        document.querySelector(".home-notice-board").style.display = "none";
-    }
-
-    function nb(){
-        document.querySelector(".home-body-container").classList.add('mb');
-        document.querySelector(".home-info").style.display = "none";
-        document.getElementById("nb_li").classList.add("active");
-        document.getElementById("pg_li").classList.remove("active");
-        document.querySelector(".home-notice-board").style.display = "block";
-    }
-</script>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="{% static 'js/main.js' %}"></script>
-
-</body>
-
-</html>
+{% endblock %}

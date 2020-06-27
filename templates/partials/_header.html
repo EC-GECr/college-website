@@ -1,0 +1,217 @@
+{% load static %}
+
+<div class="header-big d-md-block d-none">
+    <header class="navbar nav-bg fixed-top">
+            <div class="container home-head-container">
+                <a href="index.html" class="navbar-brand">
+                    <img src="{% static 'img/logo.png' %}" id="logo" alt="GEC Raipur" />
+
+                    <div class="brand-name d-inline ml-2">
+                        <ul>
+                            <li>
+                          <span id="college">
+                            Government Engineering College
+                          </span>
+                            </li>
+                            <li>
+                          <span id="department">
+                            Electronics & Telecommunication Department
+                          </span>
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+
+                <button
+                        class="navbar-toggler"
+                        data-toggle="collapse"
+                        data-target="#navColl"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link dark-btn">
+                            Log in
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="register.html" class="nav-link light-btn">
+                            Register
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    </header>
+
+    <nav class="navbar navbar-expand-sm my-nav nav-bg">
+        <div class="container nav-container">
+            <ul class="navbar-nav">
+
+                <li
+                    {% if '/' == request.path %}
+                    class="nav-item active"
+
+                    {% else %}
+                    class="nav-item"
+
+                    {% endif %}
+                >
+
+                    <a href="{% url 'index' %}" class="nav-link">
+                        Home
+                    </a>
+                </li>
+
+
+                <li
+                        {% if 'institute' in request.path %}
+                            class="nav-item active"
+
+                        {% else %}
+                            class="nav-item"
+
+                        {% endif %}
+                >
+
+                    <a href="{% url 'institute' %}" class="nav-link">
+                        Institute
+                    </a>
+                </li>
+
+
+                <li
+                        {% if 'department' in request.path %}
+                            class="nav-item active"
+
+                        {% else %}
+                            class="nav-item"
+
+                        {% endif %}
+                >
+
+                    <a href="{% url 'department' %}" class="nav-link">
+                        Department
+                    </a>
+                </li>
+
+
+                <li
+                        {% if 'contact' in request.path %}
+                            class="nav-item active"
+
+                        {% else %}
+                            class="nav-item"
+
+                        {% endif %}
+                >
+
+                    <a href="{% url 'contact' %}" class="nav-link">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="header-sm d-md-none d-block">
+    <header class="navbar nav-bg fixed-top">
+        <div class="container home-head-container">
+            <a href="index.html" class="navbar-brand">
+                <img src="{% static 'img/logo.png' %}" id="logo" alt="GEC Raipur">
+            </a>
+
+            <!-- Menu Button -->
+            <div class="menu-btn">
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
+            </div>
+
+            <!-- Menu -->
+            <nav class="menu">
+                <div class="close-btn">&times;</div>
+
+                <ul class="menu-nav">
+                    <li
+                            {% if '/' == request.path %}
+                                class="nav-item0 active"
+
+                            {% else %}
+                                class="nav-item0"
+
+                            {% endif %}
+                    >
+
+                        <a href="{% url 'index' %}" class="nav-link">
+                            Home
+                        </a>
+                    </li>
+
+
+                    <li
+                            {% if 'institute' in request.path %}
+                                class="nav-item0 active"
+
+                            {% else %}
+                                class="nav-item0"
+
+                            {% endif %}
+                    >
+
+                        <a href="{% url 'institute' %}" class="nav-link">
+                            Institute
+                        </a>
+                    </li>
+
+
+                    <li
+                            {% if 'department' in request.path %}
+                                class="nav-item0 active"
+
+                            {% else %}
+                                class="nav-item0"
+
+                            {% endif %}
+                    >
+
+                        <a href="{% url 'department' %}" class="nav-link">
+                            Department
+                        </a>
+                    </li>
+
+
+                    <li
+                            {% if 'contact' in request.path %}
+                                class="nav-item0 active"
+
+                            {% else %}
+                                class="nav-item0"
+
+                            {% endif %}
+                    >
+
+                        <a href="{% url 'contact' %}" class="nav-link">
+                            Contact
+                        </a>
+                    </li>
+
+                    <li class="nav-item0">
+                        <a href="login.html" class="nav-link0 dark-btn">
+                            Log in
+                        </a>
+                    </li>
+
+                    <li class="nav-item0">
+                        <a href="register.html" class="nav-link0 light-btn">
+                            Register
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</div>
