@@ -1,0 +1,72 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container session-container arrow-top">
+
+        <nav class="navbar student-nav nav-bg">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link bc">
+                        <i class="fas fa-chevron-right bc-arrow"></i>
+                        Current Session
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="row session-body">
+            <div class="col-md-4 session-info">
+
+                <strong>Session</strong>:
+                <span class="sess-info-1">
+                         Summer, 2020</span> <br/>
+                <strong>Semester</strong>: 8th <br />
+                <strong>Name</strong>: Suyash Bajpai <br />
+
+                <strong>Email</strong> : thesuyashbajpai13@gmail.com
+            </div>
+
+            <div class="col-md-1"></div>
+
+            <div class="col-md-7 inside-session">
+                <div class="inside-session-items">
+                    <span class="in-sess-itm-1">Time Table</span>
+                    <a href="" class="sess-item-links"><i class="fas fa-external-link-alt float-right"></i></a>
+                </div>
+
+                <div class="inside-session-items">
+                    <span class="in-sess-itm-1">Academic Calender</span>
+                    <a href="" class="sess-item-links"><i class="fas fa-external-link-alt float-right"></i></a>
+                </div>
+
+
+
+                <div class="inside-session-items">
+                    <span class="in-sess-itm-1">Subjects </span>
+                    <a href="" class="sess-item-links"><i class="fas fa-external-link-alt float-right"></i></a>
+                </div>
+
+
+
+                <div class="inside-session-items">
+                    <span class="in-sess-itm-1">Syllabus</span>
+                    <a href="" class="sess-item-links"><i class="fas fa-external-link-alt float-right"></i></a>
+                </div>
+
+
+
+                <div class="inside-session-items">
+                    <span class="in-sess-itm-1">Class Tests</span>
+                    <a href="" class="sess-item-links"><i class="fas fa-external-link-alt float-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,141 @@
+{% extends 'base2.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="container dashboard-body-container arrow-top">
+
+        <nav class="navbar student-nav nav-bg">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="dash-area">
+            <div class="row">
+                <div class="col-md-4 dash-sections">
+
+                    <div class="card">
+                        <div class="card-body">
+                                <span class="card-name">
+                                    Current Session
+                                </span>
+                            <img src="{% static 'img/session.svg' %}" alt="Study Material" class="section-icons">
+                        </div>
+
+                        <div class="open-section text-center">
+                            <a href="session.html" class="open">
+                                <i class="fas fa-door-open"></i>
+                                Open
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4 dash-sections">
+
+                    <div class="card">
+                        <div class="card-body">
+                                <span class="card-name">
+                                    Study Material
+                                </span>
+                            <img src="{% static 'img/book.svg' %}" alt="Study Material" class="section-icons">
+                        </div>
+
+                        <div class="open-section text-center">
+                            <a href="study_material.html" class="open">
+                                <i class="fas fa-door-open"></i>
+                                Open
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4 dash-sections">
+
+                    <div class="card">
+                        <div class="card-body">
+                                <span class="card-name">
+                                    Industry Ready
+                                </span>
+                            <img src="{% static 'img/job.svg' %}" alt="Study Material" class="section-icons">
+                        </div>
+
+                        <div class="open-section text-center">
+                            <a href="industry_ready.html" class="open">
+                                <i class="fas fa-door-open"></i>
+                                Open
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-4 dash-sections">
+
+                    <div class="card">
+                        <div class="card-body">
+                                <span class="card-name">
+                                    Academic Record
+                                </span>
+                            <img src="{% static 'img/grade.svg' %}" alt="Study Material" class="section-icons">
+                        </div>
+
+                        <div class="open-section text-center">
+                            <a href="academic_record.html" class="open">
+                                <i class="fas fa-door-open"></i>
+                                Open
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4 dash-sections">
+
+                    <div class="card">
+                        <div class="card-body">
+                                <span class="card-name">
+                                    Grow Your Self
+                                </span>
+                            <img src="{% static 'img/growth.svg' %}" alt="Study Material" class="section-icons">
+                        </div>
+
+                        <div class="open-section text-center">
+                            <a href="grow_self.html" class="open">
+                                <i class="fas fa-door-open"></i>
+                                Open
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4 dash-sections">
+
+                    <div class="card">
+                        <div class="card-body">
+                                <span class="card-name">
+                                    Feedback
+                                </span>
+                            <img src="{% static 'img/feedback.svg' %}" alt="Study Material" class="section-icons">
+                        </div>
+
+                        <div class="open-section text-center">
+                            <a href="feedback.html" class="open">
+                                <i class="fas fa-door-open"></i>
+                                Open
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

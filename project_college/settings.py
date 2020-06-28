@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # Project's Apps
     'pages.apps.PagesConfig',
     'accounts.apps.AccountsConfig',
+    'student.apps.StudentConfig',
 ]
 
 MIDDLEWARE = [
