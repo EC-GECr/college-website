@@ -1,0 +1,48 @@
+{% extends 'base2.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="container-fluid" id="login-body">
+        <div class="row">
+            <div class="col-sm-12 col-lg-5 wrap">
+                <div class="signin">
+                    <span class="text-head">Welcome Back!</span>
+
+                    <form action="">
+
+                        <div class="form-input">
+                            <label for="roll_id">Roll Number/Unique ID</label>
+                            <input name="roll_id" type="text" autocomplete="off" required>
+                        </div>
+
+                        <div class="form-input">
+                            <label for="password">Password</label>
+                            <input name="password" type="password" autocomplete="off" required>
+                        </div>
+
+
+                        <button type="submit" class="dark-btn"><a href="dashboard.html">Log in</a></button>
+                    </form>
+
+                    <div class="links text-center">
+                        <a href="">Forgot Password? <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+
+                    <div class="or">
+                        <hr class="bar">
+                        <span> OR </span>
+                        <hr class="bar">
+                    </div>
+
+                    <a href="register-form.html" class="light-btn">Create Account</a>
+                </div>
+            </div>
+
+            <div class="col-sm-0 d-none d-md-block side-img col-lg-7">
+                <img src="{% static  'img/logo.png' %}" alt="GEC Logo">
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

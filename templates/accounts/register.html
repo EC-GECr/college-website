@@ -1,0 +1,43 @@
+{% extends 'base2.html' %}
+
+{% load static %}
+
+{% block content %}
+   <div class="container-fluid" id="login-body">
+    <div class="row">
+
+        <div class="col-sm-12 col-lg-5 wrap">
+            <div class="register-welcome">
+
+                <span class="text-head">Hey There!</span>
+                <p class="welcome-text">
+                    Welcome to the <strong>Electronics and Telecommunication Department</strong>. We are so excited to see you here!
+                </p>
+                <p></p>
+                <p class="welcome-text">
+                    Create an account by entering your personal information,  It's just a one time thing.
+                </p>
+
+                <a href="register-form.html" class="dark-btn">
+                    Get started
+                </a>
+
+                <div class="or">
+                    <hr class="bar">
+                    <span> OR </span>
+                    <hr class="bar">
+                </div>
+
+                <h5>Already have an account?</h5>
+                <a href="login.html" class="light-btn">Log in</a>
+            </div>
+        </div>
+
+        <div class="col-sm-0 d-none d-md-block side-img col-lg-7">
+            <img src="{% static 'img/logo.png' %}" alt="GEC Logo">
+        </div>
+
+
+    </div>
+    </div>
+{% endblock %}
