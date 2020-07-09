@@ -1,0 +1,368 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="my-wrap wrap-1">
+        <div class="container register-card mb-4">
+            <div class="card">
+
+                {% if request.method == 'GET' %}
+
+
+                    <h3 class="card-header head">Register</h3>
+                    <div class="card-header progress">
+                        <span class="is-active"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="card-bodies">
+                        <div class="card-body card-body-step-1 is-showing">
+                            <div class="container-fluid">
+                                <div class="card-title">
+                                    Tell us about yourself!
+                                </div>
+
+                                <form id="form-1">
+                                    <div class="row">
+
+                                        <div class="col-sm-6">
+                                            <label for="firstname">First Name</label>
+                                            <input name="firstname" type="text" autocomplete="off">
+                                            <!-- <input name="firstname" type="text" required autocomplete="off"> -->
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <label for="lastname">Last Name</label>
+                                            <input name="lastname" type="text" autocomplete="off">
+                                            <!-- <input name="lastname" type="text" required autocomplete="off"> -->
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <label for="email">Email <span>(Will be verified later)</span></label>
+                                            <input name="email" type="email" autocomplete="off">
+                                            <!-- <input name="email" type="email" required autocomplete="off"> -->
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <!-- TODO: Use intl-tel -->
+                                            <label for="student-phone">Mobile Number</label>
+                                            <input name="phone" type="tel" required autocomplete="off">
+                                            <!-- <input name="phone" type="tel" required autocomplete="off"> -->
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <label for="roll">Roll Number</label>
+                                            <input name="roll" type="text" autocomplete="off">
+                                            <!-- <input name="roll" type="text" required autocomplete="off"> -->
+                                        </div>
+
+                                        <div class="col-sm-6">
+                                            <label for="enroll">Enrollment Number</label>
+                                            <input name="enroll" type="text" autocomplete="off">
+                                            <!-- <input name="enroll" type="text" required autocomplete="off"> -->
+                                        </div>
+
+                                        <!-- <div class="col-md-6">
+                                            <label for="batch">Graduation Year</label>
+                                            <input name="batch" type="month" autocomplete="off">
+                                                <input name="batch" type="month" required autocomplete="off"> -->
+                                        <!-- </div> -->
+
+                                        <div class="col-md-12 text-center">
+                                            <button type="button" id="btn-1" class="dark-btn clicker">Continue <i class="fas fa-arrow-circle-right"></i></button>
+                                            <!-- <button type="submit" class="dark-btn" onclick="trigger()">Next</!-->
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="card-body card-body-step-2">
+                            <div class="card-title">
+                                Academic Details
+                            </div>
+
+                            <form id="form-2">
+                                <div class="row">
+
+                                    <div class="col-md-12">
+                                        <h5 class="subsec" >Class 10th (SSC)</h5>
+                                    </div>
+                                    <div class="col-md-4 ">
+                                        <label for="board">Board</label>
+                                        <select class="board select-css" name="board1" form="acad-info-info">
+                                            <option value="cbse">Choose your Board of Examination</option>
+                                            <option value="cbse">Central Board of Secondary Education (CBSE)</option>
+                                            <option value="icse">Indian Council of Secondary Education(ICSE)</option>
+                                            <option value="cg">Chhattisgarh Board of Secondary Education(CG Board)</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-4 col-xs-6">
+                                        <label for="tenthroll">Roll Number</label>
+                                        <input name="tenthroll" type="text" autocomplete="off">
+                                        <!-- <input name="tenth-roll" type="text" required autocomplete="off"> -->
+                                    </div>
+
+                                    <div class="col-md-4 col-xs-6">
+                                        <label for="tenthcent">Percentage (%)</label>
+                                        <input name="tenthcent" type="text" autocomplete="off">
+                                        <!-- <input name="tenth-cent" type="text" required autocomplete="off"> -->
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <h5 class="subsec" >Class 12th (HSC)</h5>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label for="board">Board</label>
+                                        <select class="board select-css" name="board2" form="acad-info-info">
+                                            <option value="cbse">Choose your Board of Examination</option>
+                                            <option value="cbse">Central Board of Secondary Education (CBSE)</option>
+                                            <option value="icse">Indian Council of Secondary Education(ICSE)</option>
+                                            <option value="cg">Chhattisgarh Board of Secondary Education(CG Board)</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-4 col-xs-6">
+                                        <label for="twelthroll">Roll Number</label>
+                                        <input name="twelthroll" type="text" autocomplete="off">
+                                        <!-- <input name="twelth-roll" type="text" required autocomplete="off"> -->
+                                    </div>
+
+                                    <div class="col-md-4 col-xs-6">
+                                        <label for="twelthcent">Percentage (%)</label>
+                                        <input name="twelthcent" type="text" autocomplete="off">
+                                        <!-- <input name="twelth-cent" type="text" required autocomplete="off"> -->
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <h5 class="subsec">Chhattisgarh Pre-Engineering Test (CGPET)</h5>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <label for="petroll">Roll Number</label>
+                                        <input name="petroll" type="text" autocomplete="off">
+                                        <!-- <input name="pet-roll" type="text" required autocomplete="off"> -->
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <label for="petrank">Rank</label>
+                                        <input name="petrank" type="text" autocomplete="off">
+                                        <!-- <input name="pet-rank" type="text" required autocomplete="off"> -->
+                                    </div>
+
+                                    <div class="col-md-12 text-center">
+                                        <button type="button" id="btn-2" class="dark-btn clicker">Next <i class="fas fa-arrow-circle-right"></i></button>
+                                        <!-- <button type="submit" class="dark-btn" onclick="trigger()">Next</!-->
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="card-body card-body-step-3">
+                            <div class="card-title">
+                                Family Details
+                            </div>
+
+                            <form id="form-3">
+                                <div class="row">
+
+                                    <div class="col-md-12">
+                                        <h5 class="subsec" >Father's Information</h5>
+                                    </div>
+
+                                    <div class="col-sm-6 col-md-6">
+
+                                        <label for="fatherfirst">First Name</label>
+                                        <input name="fatherfirst" type="text" required autocomplete="off">
+                                        <!-- <input name="father-first" type="text" required autocomplete="off"> -->
+                                    </div>
+
+                                    <div class="col-sm-6 col-md-6">
+                                        <label for="fatherlast">Last Name</label>
+                                        <input name="fatherlast" type="text" required autocomplete="off">
+                                        <!-- <input name="father-last" type="text" required autocomplete="off"> -->
+                                    </div>
+
+                                    <div class="col-sm-6 col-md-6">
+                                        <label for="fatherjob">Occupation</label>
+                                        <input name="fatherjob" type="text" required autocomplete="off">
+                                        <!-- <input name="father-job" type="text" required autocomplete="off"> -->
+
+                                    </div>
+
+                                    <div class="col-sm-6 col-md-6">
+                                        <!-- TODO: Use intl-tel -->
+                                        <label for="fatherphone">Mobile Number</label>
+                                        <input name="fatherphone" type="tel" required autocomplete="off">
+                                        <!-- <input name="father-phone" type="tel" required autocomplete="off"> -->
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <h5 class="subsec" >Mother's Information</h5>
+                                    </div>
+
+                                    <div class="col-sm-6 col-md-6">
+                                        <label for="motherfirst">First Name</label>
+                                        <input name="motherfirst" type="text" required autocomplete="off">
+                                        <!-- <input name="mother-first" type="text" required autocomplete="off"> -->
+                                    </div>
+
+                                    <div class="col-sm-6 col-md-6">
+                                        <label for="motherlast">Last Name</label>
+                                        <input name="motherlast" type="text" required autocomplete="off">
+                                        <!-- <input name="mother-last" type="text" required autocomplete="off"> -->
+                                    </div>
+
+                                    <div class="col-sm-6 col-md-6">
+                                        <label for="motherjob">Occupation</label>
+                                        <input name="motherjob" type="text" required autocomplete="off">
+                                        <!-- <input name="mother-job" type="text" required autocomplete="off"> -->
+
+                                    </div>
+
+                                    <div class="col-sm-6 col-md-6">
+                                        <!-- TODO: Use intl-tel -->
+                                        <label for="motherphone">Mobile Number</label>
+                                        <input name="motherphone" type="tel" required autocomplete="off">
+                                        <!-- <input name="mother-phone" type="tel" required autocomplete="off"> -->
+
+                                    </div>
+
+                                    <div class="col-md-12 text-center">
+                                        <button type="button" id="btn-3" class="dark-btn clicker">One more <i class="fas fa-arrow-circle-right"></i></button>
+                                        <!-- <button type="submit" class="dark-btn">One more</button> -->
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="card-body card-body-step-4 ">
+                            <div class="card-title">
+                                Personal Information
+                            </div>
+
+                            <!-- <div class="card-text">
+                                Just a little more about you!
+                            </div> -->
+
+                            <form id="basic-info" action="{% url 'register-form' %}" method="POST">
+
+                                {% csrf_token %}
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label for="dob">Date of Birth</label>
+                                        <input name="dob" type="date" required autocomplete="off">
+                                        <!-- <input name="dob" type="date" required autocomplete="off"> -->
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label for="sex">Gender</label>
+                                        <select class="sex select-css" name="sex" form="basic-info">
+                                            <option value="select">Please select one</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="not-say">Rather not say</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="hidden-inputs">
+                                        <input type="hidden" name="firstName">
+                                        <input type="hidden" name="lastName">
+                                        <input type="hidden" name="Email">
+                                        <input type="hidden" name="Phone">
+                                        <input type="hidden" name="Roll">
+                                        <input type="hidden" name="Enroll">
+                                        <input type="hidden" name="Board10">
+                                        <input type="hidden" name="TenthRoll">
+                                        <input type="hidden" name="TenthCent">
+                                        <input type="hidden" name="Board12">
+                                        <input type="hidden" name="TwelthRoll">
+                                        <input type="hidden" name="TwelthCent">
+                                        <input type="hidden" name="PETRoll">
+                                        <input type="hidden" name="PETRank">
+                                        <input type="hidden" name="FatherFirst">
+                                        <input type="hidden" name="FatherLast">
+                                        <input type="hidden" name="FatherJob">
+                                        <input type="hidden" name="FatherPhone">
+                                        <input type="hidden" name="MotherFirst">
+                                        <input type="hidden" name="MotherLast">
+                                        <input type="hidden" name=MotherJob">
+                                        <input type="hidden" name="MotherPhone">
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label for="blood">Blood Group</label>
+                                        <input name="blood" type="text"  autocomplete="off">
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label for="height">Height (in centimeters)</label>
+                                        <input name="height" type="number"  autocomplete="off">
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label for="weight">Weight (in kilograms)</label>
+                                        <input name="weight" type="number"  autocomplete="off">
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label for="aadhar">Aadhar Number</label>
+                                        <input name="aadhar" type="number" placeholder="Not Necessary"  autocomplete="off">
+                                    </div>
+
+                                    <div class="col-md-12 text-center">
+
+                                        <button type="submit" id="btn-4" class="dark-btn clicker">Submit <i class="fas fa-arrow-circle-right"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+                {% else %}
+
+                    <h3 class="card-header head">Register</h3>
+                    <div class="card-header progress">
+                        <span class="is-active"></span>
+                        <span class="is-active"></span>
+                        <span class="is-active"></span>
+                        <span class="is-active"></span>
+                    </div>
+
+                    <div class="card-bodies">
+                        <div class="card-body card-body-step-5 is-showing">
+                            <div class="row">
+                                <div class="col-md-6 d-none form-img d-md-block p-0">
+                                    <img src="{% static 'img/logo.png' %}" alt="GECR">
+                                </div>
+                                <div class="col-md-6 side-panel">
+                                    <h3>
+                                        You have been registered successfully. <p></p>
+                                        Please Log in to continue.
+                                    </h3>
+                                    <a href="{% url 'login' %}" class="dark-btn">
+                                        Log in
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
