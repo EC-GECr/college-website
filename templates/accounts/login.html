@@ -9,11 +9,12 @@
                 <div class="signin">
                     <span class="text-head">Welcome Back!</span>
 
-                    <form action="">
+                    <form action="{% url 'login' %}" method="post">
 
+                        {% csrf_token %}
                         <div class="form-input">
-                            <label for="roll_id">Roll Number/Unique ID</label>
-                            <input name="roll_id" type="text" autocomplete="off" required>
+                            <label for="username">Roll Number/Unique ID</label>
+                            <input name="username" type="text" autocomplete="off" required>
                         </div>
 
                         <div class="form-input">
@@ -22,7 +23,7 @@
                         </div>
 
 
-                        <button type="submit" class="dark-btn"><a href="dashboard.html">Log in</a></button>
+                        <button type="submit" class="dark-btn">Log in</button>
                     </form>
 
                     <div class="links text-center">

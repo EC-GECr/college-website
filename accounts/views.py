@@ -13,9 +13,9 @@ def login(request):
 
         if user is not None:
             auth.login(request, user)
-            msg = 'Welcome, {}. Create a deck or flip the existing ones!'.format(username)
-            messages.success(request, msg)
-            return redirect('/flashcard/decks')
+            # msg = 'Welcome, {}. Create a deck or flip the existing ones!'.format(username)
+            # messages.success(request, msg)
+            return redirect('/student/dashboard')
 
         else:
             msg = "Argh! Invalid Credentials"
@@ -28,6 +28,11 @@ def login(request):
 
 def register(request):
     return render(request, 'accounts/register.html')
+
+
+def register_form(request):
+    return render(request, 'accounts/register_form.html')
+
 
 def logout(request):
     if request.method == 'POST':
