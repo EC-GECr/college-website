@@ -32,18 +32,31 @@ def register(request):
 
 
 def register_account(request):
+
     if request.method == 'POST':
+
+        # Get Form Values
         username = request.POST['username']
         password1 = request.POST['password1']
         password2 = request.POST['password2']
-        print(username, password1, password2)
 
+        # Check: Match Passwords
         if password1 == password2:
+
+            # Check: Username Availability
+            if User.objects.filter(username=username).exists():
+                messages.error(request, 'Username {name} is already taken'.format(name=username))
+                return redirect('register-account')
+
             user = User.objects.create_user(username=username, password=password1)
             user.save()
             auth.login(request, user)
 
             return render(request, 'accounts/register_form.html')
+
+        else:
+            messages.error(request, 'Passwords do not match')
+            return redirect('register-account')
 
     return render(request, 'accounts/register_account.html')
 

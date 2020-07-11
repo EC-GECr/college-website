@@ -25,15 +25,22 @@
                 </div>
 
                 <div class="card-bodies">
-                    <div class="card-body card-body-step-5 is-showing">
+                    <div class="card-body is-showing">
 
                         <form action="{% url 'register-account' %}" method="post">
                             {% csrf_token %}
 
+                            {% include 'partials/_alerts.html' %}
+
                             <div class="row">
-                                <div class="col-md-12">
+                                <div class="col-md-6">
                                     <label for="username">Username</label>
                                     <input name="username" type="text" required autocomplete="off">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="grad_year">Graduation Year</label>
+                                    <input name="grad_year" type="text" required autocomplete="off">
                                 </div>
 
                                 <div class="col-md-12 text-center mt-3 mb-2">
@@ -50,7 +57,7 @@
                                 </div>
 
                                 <div class="col-md-12 text-center">
-                                    <button type="submit" id="submit" class="dark-btn clicker">Continue <i class="fas fa-arrow-circle-right"></i></button>
+                                    <button type="submit" id="submit" class="dark-btn">Continue <i class="fas fa-arrow-circle-right"></i></button>
                                     <!-- <button type="submit" class="dark-btn" onclick="trigger()">Next</!-->
                                 </div>
                             </div>

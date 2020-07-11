@@ -1,7 +1,3 @@
-// window.addEventListener('resize', function () { 
-//   "use strict";
-//   window.location.reload(); 
-// });
 
 // Navigation Menu
 const menuBtn = document.querySelector(".menu-btn");
@@ -29,40 +25,69 @@ function closeMenu(){
 
 
 // Register Form
+let j = 0;
 
 $(".clicker").click(function () {
-  var $btn = $(this),
+
+  let $btn = $(this),
     $step = $btn.parents(".card-body"),
     stepIndex = $step.index(),
     $pag = $(".card-header span").eq(stepIndex);
 
-  console.log(stepIndex);
-  if (
-    stepIndex === 0 ||
-    stepIndex === 1 ||
-    stepIndex === 2 ||
-    stepIndex === 3
-  ) {
-    step1($step, $pag, stepIndex);
+  let form_box;
+  let alert_box;
+
+  console.log(j);
+  if(j === 0) {
+    form_box = document.querySelector('#form-1');
+    alert_box = document.querySelector('.msg-box-1');
   }
-  // else
-  //     { step3($step, $pag); }
+  if(j === 1) {
+    form_box = document.querySelector('#form-2');
+    alert_box = document.querySelector('.msg-box-2');
+  }
+  if(j === 2) {
+    form_box = document.querySelector('#form-3');
+    alert_box = document.querySelector('.msg-box-3');
+  }
+
+  let allAreFilled = true;
+
+  form_box.querySelectorAll("[required]").forEach(function (i) {
+    if(!allAreFilled) return;
+    if(!i.value) allAreFilled = false;
+  });
+
+  if(!allAreFilled){
+    alert_box.classList.add('show-alert');
+  }
+
+  else{
+    if (
+        stepIndex === 0 ||
+        stepIndex === 1 ||
+        stepIndex === 2 ||
+        stepIndex === 3
+    ) {
+      step1($step, $pag, stepIndex);
+    }
+    alert_box.classList.remove('show-alert');
+    j++;
+  }
 });
 
 function step1($step, $pag, stepIndex) {
-  console.log("step1");
+
   // animate the step out
   $step.addClass("animate-out");
 
   // animate the step in
   setTimeout(function () {
-    console.log("in");
     $step.removeClass("animate-out is-showing").next().addClass("animate-in");
 
     $pag.removeClass("is-active").next().addClass("is-active");
 
     if (stepIndex === 3) {
-      console.log("I was here!");
       $(".card-header span").addClass("is-active");
     }
   }, 600);
@@ -80,7 +105,7 @@ function step3($step, $pag) {
 
 
 // Back-to-top Button
-var btn = $("#back-to-top");
+const btn = $("#back-to-top");
 
 $(window).scroll(function () {
   if ($(window).scrollTop() > 200) {
@@ -97,8 +122,8 @@ btn.on("click", function (e) {
 });
 
 // To Career Map Scroll
-var mapBtn = $('#careerMap')
-var homeContainer = $('.home-body-container')
+const mapBtn = $('#careerMap');
+const homeContainer = $('.home-body-container');
 
 $('.scrollTo').click(function(){
   mapBtn.addClass("show");

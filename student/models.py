@@ -14,21 +14,22 @@ class Student(models.Model):
     first_name = models.CharField(max_length=30, default='NA')
     last_name = models.CharField(max_length=30, default='NA')
     email = models.CharField(max_length=50, default='NA')
-    phone = models.CharField(max_length=15, default='NA')
+    phone = models.CharField(max_length=20, default='NA')
     roll_number = models.CharField(max_length=20, default='NA')
     enroll_number = models.CharField(max_length=20, default='NA')
+    grad_year = models.CharField(max_length=20, default='NA')
 
     # Academic Details
-    tenth_board = models.CharField(max_length=10, default='NA')
+    tenth_board = models.CharField(max_length=100, default='NA')
     tenth_roll_number = models.CharField(max_length=50, default='NA')
-    tenth_cent = models.CharField(max_length=10, default='NA')
+    tenth_cent = models.CharField(max_length=20, default='NA')
 
-    twelfth_board = models.CharField(max_length=10, default='NA')
+    twelfth_board = models.CharField(max_length=100, default='NA')
     twelfth_roll_number = models.CharField(max_length=50, default='NA')
-    twelfth_cent = models.CharField(max_length=10, default='NA')
+    twelfth_cent = models.CharField(max_length=20, default='NA')
 
     pet_roll_number = models.CharField(max_length=30, default='NA')
-    pet_rank = models.CharField(max_length=8, default='NA')
+    pet_rank = models.CharField(max_length=20, default='NA')
 
     # Family details
     father_first = models.CharField(max_length=30, default='NA')
@@ -43,7 +44,7 @@ class Student(models.Model):
 
     # Personal Info
     dob = models.DateField(null=True)
-    gender = models.CharField(max_length=10, default='NA')
+    gender = models.CharField(max_length=20, default='NA')
     blood_group = models.CharField(max_length=5, default='NA')
     height = models.IntegerField(default=-1)
     weight = models.IntegerField(default=-1)

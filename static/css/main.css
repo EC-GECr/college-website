@@ -40,6 +40,12 @@
     transform: translate(0px, -5px);
     color: #ffffff; }
 
+  .msg-box{
+    display: none;
+  }
+  .show-alert{
+    display: block;
+  }
 .light-btn {
   background: #ffffff;
   color: #fa9950;

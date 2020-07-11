@@ -10,7 +10,7 @@ class StudentAdmin(admin.ModelAdmin):
 
     list_display_links = ('roll_number',)
 
-    search_fields = ('first_name', 'email','roll_number')
+    search_fields = ('first_name', 'email', 'roll_number')
 
     def has_add_permission(self, request, obj=None):
         return False

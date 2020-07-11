@@ -23,23 +23,34 @@
                                 </div>
 
                                 <form id="form-1">
+
+                                    <div class="container msg-box msg-box-1" id="form_alert">
+                                        <div class="alert alert-warning alert-dismissible text-center"  role="alert">
+                                            <button type="button" class="close" data-dismiss="alert">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            Please fill in all fields!
+                                        </div>
+                                    </div>
+
+
                                     <div class="row">
 
                                         <div class="col-sm-6">
                                             <label for="firstname">First Name</label>
-                                            <input name="firstname" type="text" autocomplete="off">
+                                            <input name="firstname" type="text" required autocomplete="off">
                                             <!-- <input name="firstname" type="text" required autocomplete="off"> -->
                                         </div>
 
                                         <div class="col-sm-6">
                                             <label for="lastname">Last Name</label>
-                                            <input name="lastname" type="text" autocomplete="off">
+                                            <input name="lastname" type="text" required autocomplete="off">
                                             <!-- <input name="lastname" type="text" required autocomplete="off"> -->
                                         </div>
 
                                         <div class="col-sm-6">
                                             <label for="email">Email <span>(Will be verified later)</span></label>
-                                            <input name="email" type="email" autocomplete="off">
+                                            <input name="email" type="email" required autocomplete="off">
                                             <!-- <input name="email" type="email" required autocomplete="off"> -->
                                         </div>
 
@@ -52,13 +63,13 @@
 
                                         <div class="col-sm-6">
                                             <label for="roll">Roll Number</label>
-                                            <input name="roll" type="text" autocomplete="off">
+                                            <input name="roll" type="text" required autocomplete="off">
                                             <!-- <input name="roll" type="text" required autocomplete="off"> -->
                                         </div>
 
                                         <div class="col-sm-6">
                                             <label for="enroll">Enrollment Number</label>
-                                            <input name="enroll" type="text" autocomplete="off">
+                                            <input name="enroll" type="text" required autocomplete="off">
                                             <!-- <input name="enroll" type="text" required autocomplete="off"> -->
                                         </div>
 
@@ -84,6 +95,16 @@
                             </div>
 
                             <form id="form-2">
+
+                                <div class="container msg-box msg-box-2" id="form_alert">
+                                    <div class="alert alert-warning alert-dismissible text-center"  role="alert">
+                                        <button type="button" class="close" data-dismiss="alert">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        Please fill in all fields!
+                                    </div>
+                                </div>
+
                                 <div class="row">
 
                                     <div class="col-md-12">
@@ -91,7 +112,7 @@
                                     </div>
                                     <div class="col-md-4 ">
                                         <label for="board">Board</label>
-                                        <select class="board select-css" name="board1" form="acad-info-info">
+                                        <select class="board select-css" id="board1" name="board1" required form="acad-info-info">
                                             <option disabled>Choose your Board of Examination</option>
                                             <option value="cbse">Central Board of Secondary Education (CBSE)</option>
                                             <option value="icse">Indian Council of Secondary Education(ICSE)</option>
@@ -102,13 +123,13 @@
 
                                     <div class="col-md-4 col-xs-6">
                                         <label for="tenthroll">Roll Number</label>
-                                        <input name="tenthroll" type="text" autocomplete="off">
+                                        <input name="tenthroll" type="text" required autocomplete="off">
                                         <!-- <input name="tenth-roll" type="text" required autocomplete="off"> -->
                                     </div>
 
                                     <div class="col-md-4 col-xs-6">
                                         <label for="tenthcent">Percentage (%)</label>
-                                        <input name="tenthcent" type="text" autocomplete="off">
+                                        <input name="tenthcent" type="text" required autocomplete="off">
                                         <!-- <input name="tenth-cent" type="text" required autocomplete="off"> -->
                                     </div>
 
@@ -118,7 +139,7 @@
 
                                     <div class="col-md-4">
                                         <label for="board">Board</label>
-                                        <select class="board select-css" name="board2" form="acad-info-info">
+                                        <select class="board select-css" id="board2" name="board2" required form="acad-info-info">
                                             <option disabled>Choose your Board of Examination</option>
                                             <option value="cbse">Central Board of Secondary Education (CBSE)</option>
                                             <option value="icse">Indian Council of Secondary Education(ICSE)</option>
@@ -129,13 +150,13 @@
 
                                     <div class="col-md-4 col-xs-6">
                                         <label for="twelthroll">Roll Number</label>
-                                        <input name="twelthroll" type="text" autocomplete="off">
+                                        <input name="twelthroll" type="text" required autocomplete="off">
                                         <!-- <input name="twelth-roll" type="text" required autocomplete="off"> -->
                                     </div>
 
                                     <div class="col-md-4 col-xs-6">
                                         <label for="twelthcent">Percentage (%)</label>
-                                        <input name="twelthcent" type="text" autocomplete="off">
+                                        <input name="twelthcent" type="text" required autocomplete="off">
                                         <!-- <input name="twelth-cent" type="text" required autocomplete="off"> -->
                                     </div>
 
@@ -145,13 +166,13 @@
 
                                     <div class="col-sm-6">
                                         <label for="petroll">Roll Number</label>
-                                        <input name="petroll" type="text" autocomplete="off">
+                                        <input name="petroll" type="text" required autocomplete="off">
                                         <!-- <input name="pet-roll" type="text" required autocomplete="off"> -->
                                     </div>
 
                                     <div class="col-sm-6">
                                         <label for="petrank">Rank</label>
-                                        <input name="petrank" type="text" autocomplete="off">
+                                        <input name="petrank" type="text" required autocomplete="off">
                                         <!-- <input name="pet-rank" type="text" required autocomplete="off"> -->
                                     </div>
 
@@ -170,6 +191,16 @@
                             </div>
 
                             <form id="form-3">
+                                <div class="container msg-box msg-box-3" id="form_alert">
+                                    <div class="alert alert-warning alert-dismissible text-center"  role="alert">
+                                        <button type="button" class="close" data-dismiss="alert">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        Please fill in all fields!
+                                    </div>
+                                </div>
+
+
                                 <div class="row">
 
                                     <div class="col-md-12">
