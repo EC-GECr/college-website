@@ -31,9 +31,27 @@ def register(request):
     return render(request, 'accounts/register.html')
 
 
-def register_form(request):
+def register_account(request):
     if request.method == 'POST':
+        username = request.POST['username']
+        password1 = request.POST['password1']
+        password2 = request.POST['password2']
+        print(username, password1, password2)
 
+        if password1 == password2:
+            user = User.objects.create_user(username=username, password=password1)
+            user.save()
+            auth.login(request, user)
+
+            return render(request, 'accounts/register_form.html')
+
+    return render(request, 'accounts/register_account.html')
+
+
+def register_form(request):
+
+    if request.method == 'POST':
+        user_id = request.user.id
         first_name = request.POST['firstName']
         last_name = request.POST['lastName']
         email = request.POST['Email']
@@ -42,13 +60,13 @@ def register_form(request):
         enroll = request.POST['Enroll']
 
         board1 = request.POST['Board10']
-        tenthroll = request.POST['Tenthroll']
-        tenthcent = request.POST['Tenthcent']
+        tenthroll = request.POST['TenthRoll']
+        tenthcent = request.POST['TenthCent']
         board2 = request.POST['Board12']
-        twelthroll = request.POST['Twelthroll']
-        twelthcent = request.POST['Twelthcent']
-        petroll = request.POST['PETroll']
-        petrank = request.POST['PETrank']
+        twelthroll = request.POST['TwelthRoll']
+        twelthcent = request.POST['TwelthCent']
+        petroll = request.POST['PETRoll']
+        petrank = request.POST['PETRank']
 
         fatherfirst = request.POST['FatherFirst']
         fatherlast = request.POST['FatherLast']
@@ -67,8 +85,45 @@ def register_form(request):
         aadhar = request.POST['aadhar']
 
         student = Student(
-            fi
+            user_id=user_id,
+            is_student=True,
+            is_faculty=False,
+
+            first_name=first_name,
+            last_name=last_name,
+            email=email,
+            phone=phone,
+            roll_number=roll,
+            enroll_number=enroll,
+
+            tenth_board=board1,
+            tenth_roll_number=tenthroll,
+            tenth_cent=tenthcent,
+            twelfth_board=board2,
+            twelfth_roll_number=twelthroll,
+            twelfth_cent=twelthcent,
+            pet_roll_number=petroll,
+            pet_rank=petrank,
+
+            father_first=fatherfirst,
+            father_last=fatherlast,
+            father_phone=fatherphone,
+            father_job=fatherjob,
+            mother_first=motherfirst,
+            mother_last=motherlast,
+            mother_phone=motherphone,
+            mother_job=motherjob,
+
+            dob=dob,
+            gender=sex,
+            blood_group=blood,
+            height=height,
+            weight=weight,
+            aadhar_number=aadhar
         )
+        student.save()
+        auth.logout(request)
+        return render(request, 'accounts/login.html')
 
     return render(request, 'accounts/register_form.html')
 

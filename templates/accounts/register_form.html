@@ -7,9 +7,6 @@
         <div class="container register-card mb-4">
             <div class="card">
 
-                {% if request.method == 'GET' %}
-
-
                     <h3 class="card-header head">Register</h3>
                     <div class="card-header progress">
                         <span class="is-active"></span>
@@ -95,7 +92,7 @@
                                     <div class="col-md-4 ">
                                         <label for="board">Board</label>
                                         <select class="board select-css" name="board1" form="acad-info-info">
-                                            <option value="cbse">Choose your Board of Examination</option>
+                                            <option disabled>Choose your Board of Examination</option>
                                             <option value="cbse">Central Board of Secondary Education (CBSE)</option>
                                             <option value="icse">Indian Council of Secondary Education(ICSE)</option>
                                             <option value="cg">Chhattisgarh Board of Secondary Education(CG Board)</option>
@@ -122,7 +119,7 @@
                                     <div class="col-md-4">
                                         <label for="board">Board</label>
                                         <select class="board select-css" name="board2" form="acad-info-info">
-                                            <option value="cbse">Choose your Board of Examination</option>
+                                            <option disabled>Choose your Board of Examination</option>
                                             <option value="cbse">Central Board of Secondary Education (CBSE)</option>
                                             <option value="icse">Indian Council of Secondary Education(ICSE)</option>
                                             <option value="cg">Chhattisgarh Board of Secondary Education(CG Board)</option>
@@ -297,7 +294,7 @@
                                         <input type="hidden" name="FatherPhone">
                                         <input type="hidden" name="MotherFirst">
                                         <input type="hidden" name="MotherLast">
-                                        <input type="hidden" name=MotherJob">
+                                        <input type="hidden" name="MotherJob">
                                         <input type="hidden" name="MotherPhone">
                                     </div>
 
@@ -329,37 +326,6 @@
                             </form>
                         </div>
                     </div>
-
-
-                {% else %}
-
-                    <h3 class="card-header head">Register</h3>
-                    <div class="card-header progress">
-                        <span class="is-active"></span>
-                        <span class="is-active"></span>
-                        <span class="is-active"></span>
-                        <span class="is-active"></span>
-                    </div>
-
-                    <div class="card-bodies">
-                        <div class="card-body card-body-step-5 is-showing">
-                            <div class="row">
-                                <div class="col-md-6 d-none form-img d-md-block p-0">
-                                    <img src="{% static 'img/logo.png' %}" alt="GECR">
-                                </div>
-                                <div class="col-md-6 side-panel">
-                                    <h3>
-                                        You have been registered successfully. <p></p>
-                                        Please Log in to continue.
-                                    </h3>
-                                    <a href="{% url 'login' %}" class="dark-btn">
-                                        Log in
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                {% endif %}
 
             </div>
         </div>

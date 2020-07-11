@@ -1,5 +1,42 @@
 // Handling Registration data
 
+
+$(document).ready(function() {
+
+    $('#submit').attr('disabled', true);
+    $('#id_new_password1').on('keyup', validatePassword);
+
+    $('input').on('keyup', validateSubmit);
+
+    function validatePassword() {
+        var val = $('#id_new_password1').val();
+        var flag = true;
+
+        if (val === '') {
+            $('#password-status').text("Password can't be blank.");
+        } else if (/\s/.test(val)) {
+            $('#password-status').text("Password can't contain whitespace.");
+        } else if (!/\d/.test(val)) {
+            $('#password-status').text("Password must contain at least one digit.");
+        } else if (!/[A-Z]/.test(val)) {
+            $('#password-status').text("Password must contain at least one uppercase letter.");
+        } else if (val.length < 6 || val.length > 15) {
+            $('#password-status').text("Password length must be between 6 and 15 characters.");
+        } else {
+            flag = false;
+        }
+
+        if (flag) {
+            $('#password-status').addClass('invalid');
+        } else {
+            $('#password-status').removeClass('invalid').text("OK");
+        }
+    }
+
+    function validateSubmit() {
+        $('#submit').attr('disabled', ( $('.invalid').length > 0) );
+    }
+});
 // form-1
 const form1 = document.getElementById('form-1');
 let firstName, lastName, Email, Phone, Roll, Enroll;

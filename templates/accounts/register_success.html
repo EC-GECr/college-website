@@ -1,0 +1,38 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="my-wrap wrap-1">
+        <div class="container register-card mb-4">
+            <div class="card">
+                <h3 class="card-header head">Register</h3>
+                <div class="card-header progress">
+                    <span class="is-active"></span>
+                    <span class="is-active"></span>
+                    <span class="is-active"></span>
+                    <span class="is-active"></span>
+                </div>
+
+                <div class="card-bodies">
+                    <div class="card-body card-body-step-5 is-showing">
+                        <div class="row">
+                            <div class="col-md-6 d-none form-img d-md-block p-0">
+                                <img src="{% static 'img/logo.png' %}" alt="GECR">
+                            </div>
+                            <div class="col-md-6 side-panel">
+                                <h3>
+                                    You have been registered successfully. <p></p>
+                                    Please Log in to continue.
+                                </h3>
+                                <a href="{% url 'login' %}" class="dark-btn">
+                                    Log in
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
