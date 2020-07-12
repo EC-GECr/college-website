@@ -11,6 +11,8 @@
 
                     <form action="{% url 'login' %}" method="post">
 
+                        {% include 'partials/_alerts.html' %}
+
                         {% csrf_token %}
                         <div class="form-input">
                             <label for="username">Roll Number/Unique ID</label>
@@ -36,12 +38,12 @@
                         <hr class="bar">
                     </div>
 
-                    <a href="register-form.html" class="light-btn">Create Account</a>
+                    <a href="{% url 'register' %}" class="light-btn">Create Account</a>
                 </div>
             </div>
 
             <div class="col-sm-0 d-none d-md-block side-img col-lg-7">
-                <img src="{% static  'img/logo.png' %}" alt="GEC Logo">
+                <img src="{% static 'img/logo.png' %}" alt="GEC Logo">
             </div>
 
         </div>

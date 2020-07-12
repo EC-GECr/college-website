@@ -14,8 +14,6 @@ def login(request):
 
         if user is not None:
             auth.login(request, user)
-            # msg = 'Welcome, {}. Create a deck or flip the existing ones!'.format(username)
-            # messages.success(request, msg)
             return redirect('/student/dashboard')
 
         else:
@@ -71,6 +69,7 @@ def register_form(request):
         phone = request.POST['Phone']
         roll = request.POST['Roll']
         enroll = request.POST['Enroll']
+        grad_year = request.POST['GradYear']
 
         board1 = request.POST['Board10']
         tenthroll = request.POST['TenthRoll']
@@ -108,6 +107,7 @@ def register_form(request):
             phone=phone,
             roll_number=roll,
             enroll_number=enroll,
+            grad_year=grad_year,
 
             tenth_board=board1,
             tenth_roll_number=tenthroll,
@@ -136,7 +136,7 @@ def register_form(request):
         )
         student.save()
         auth.logout(request)
-        return render(request, 'accounts/login.html')
+        return render(request, 'accounts/register_success.html')
 
     return render(request, 'accounts/register_form.html')
 

@@ -45,7 +45,7 @@ setTimeout(function () {
 let allAreFilled = true;
 // form-1
 const form1 = document.getElementById('form-1');
-let firstName, lastName, Email, Phone, Roll, Enroll;
+let firstName, lastName, Email, Phone, Roll, Enroll, GradYear;
 const btn1 = document.getElementById('btn-1');
 
 btn1.addEventListener('click', (e) => {
@@ -56,6 +56,7 @@ btn1.addEventListener('click', (e) => {
     Phone = form1.phone.value;
     Roll = form1.roll.value;
     Enroll = form1.enroll.value;
+    GradYear = form1.grad_year.value;
 });
 
 // form-2
@@ -109,6 +110,7 @@ btn4.addEventListener('click', (e) => {
     form4.Phone.value = Phone;
     form4.Roll.value = Roll;
     form4.Enroll.value = Enroll;
+    form4.GradYear.value = GradYear;
 
     form4.Board10.value = Board10;
     form4.TenthRoll.value = TenthRoll;

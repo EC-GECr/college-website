@@ -3,7 +3,7 @@
 <div class="header-sm d-block">
     <header class="navbar nav-bg fixed-top">
         <div class="container home-head-container">
-            <a href="index.html" class="navbar-brand">
+            <a href="{% url 'index' %}" class="navbar-brand">
                 <img src="{% static 'img/logo.png' %}" id="logo" alt="GEC Raipur" />
             </a>
 
@@ -20,37 +20,54 @@
 
                 <ul class="menu-nav">
                     <li class="nav-item0">
-                        <a href="index.html" class="nav-link0">
+                        <a href="{% url 'index' %}" class="nav-link0">
                             Home
                         </a>
                     </li>
                     <li class="nav-item0">
-                        <a href="institute.html" class="nav-link0">
+                        <a href="{% url 'institute' %}" class="nav-link0">
                             Institute
                         </a>
                     </li>
                     <li class="nav-item0">
-                        <a href="department.html" class="nav-link0">
+                        <a href="{% url 'department' %}" class="nav-link0">
                             Department
                         </a>
                     </li>
-                    <li class="nav-item0 active">
-                        <a href="contactus.html" class="nav-link0">
+                    <li class="nav-item0">
+                        <a href="{% url 'contact' %}" class="nav-link0">
                             Contact
                         </a>
                     </li>
 
-                    <li class="nav-item0">
-                        <a href="login.html" class="nav-link0 dark-btn">
-                            Log in
-                        </a>
-                    </li>
+                    {% if user.is_authenticated %}
 
-                    <li class="nav-item0">
-                        <a href="register.html" class="nav-link0 light-btn">
-                            Register
-                        </a>
-                    </li>
+                        <li class="nav-item0">
+                            <a href="javascript:{document.getElementById('logout').submit()}" class="nav-link0 dark-btn">
+                                Log out
+                            </a>
+                            <form action="{% url 'logout' %}" method="post" id="logout">
+                                {% csrf_token %}
+                                <input type="hidden">
+                            </form>
+                        </li>
+
+
+                    {% else %}
+
+                        <li class="nav-item0">
+                            <a href="{% url 'login' %}" class="nav-link0 dark-btn">
+                                Log in
+                            </a>
+                        </li>
+
+                        <li class="nav-item0">
+                            <a href="{% url 'register' %}" class="nav-link0 light-btn">
+                                Register
+                            </a>
+                        </li>
+
+                    {% endif %}
                 </ul>
             </nav>
         </div>

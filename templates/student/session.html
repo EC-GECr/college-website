@@ -7,12 +7,12 @@
         <nav class="navbar student-nav nav-bg">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a href="dashboard.html" class="nav-link">
+                    <a href="{% url 'student-dashboard' %}" class="nav-link">
                         <i class="fas fa-home"></i>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="dashboard.html" class="nav-link bc">
+                    <a href="{% url 'student-session' %}" class="nav-link bc">
                         <i class="fas fa-chevron-right bc-arrow"></i>
                         Current Session
                     </a>
@@ -25,11 +25,11 @@
 
                 <strong>Session</strong>:
                 <span class="sess-info-1">
-                         Summer, 2020</span> <br/>
-                <strong>Semester</strong>: 8th <br />
-                <strong>Name</strong>: Suyash Bajpai <br />
+                         {{ current_session }}, {{ current_year }}</span> <br/>
+                <strong>Semester</strong>: {{ current_semester }} <br />
+                <strong>Name</strong>: {{ name }} <br />
 
-                <strong>Email</strong> : thesuyashbajpai13@gmail.com
+                <strong>Email</strong> : {{ email }}
             </div>
 
             <div class="col-md-1"></div>
